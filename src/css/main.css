@@ -1,0 +1,145 @@
+@font-face {
+	font-family: "CreditFont";
+	src: url("../fonts/creditfont.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	word-break: break-word;
+}
+
+body,
+html,
+button {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+button {
+	outline: none;
+}
+
+input {
+	font-family: "CreditFont";
+}
+
+.hidden {
+	display: none;
+}
+
+.form-header {
+	margin: 30px 0 50px;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.card-logo {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+
+	max-width: 100px;
+	height: 60px;
+}
+
+.form-wrapper {
+	padding-top: 55px;
+	position: relative;
+	box-sizing: border-box;
+
+	width: 400px;
+	height: 252px;
+	margin: 0 auto;
+
+	background-color: #ccc;
+	border-radius: 15px;
+
+	transition: background-color 0.5s;
+}
+
+#form {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.form-label {
+	width: 100%;
+	display: block;
+}
+
+.label-text {
+	margin-bottom: 5px;
+	display: block;
+	transition: color 0.5s;
+}
+
+.dark .label-text {
+	color: #fff;
+}
+
+#card-number-input {
+	height: 40px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 3px;
+	font-size: 18px;
+	border: 2px solid #aaa;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+#card-number-input.valid[class] {
+	border-color: green;
+}
+
+#card-number-input.invalid[class] {
+	border-color: red;
+}
+
+#submit {
+	height: 40px;
+	width: 100px;
+	margin-left: 10px;
+
+	background-color: #5eb462;
+	color: #fff;
+	cursor: pointer;
+	border: 2px solid #4c914f;
+	transition: background-color 0.5s;
+}
+
+#submit:hover {
+	background-color: #4c914f;
+}
+
+#error-message {
+	position: absolute;
+	left: 12px;
+	bottom: 95px;
+
+	transition: color 0.5s;
+}
+
+.dark #error-message {
+	color: #fff;
+}
